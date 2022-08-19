@@ -5,6 +5,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style: none;
 }
 
 :root{
@@ -13,8 +14,9 @@ export const GlobalStyle = createGlobalStyle`
   --gray-200:#E6ECF2;
   --gray-300:#DEE5EB;
   
-  --blue-200:#D5EDFE;
-  --blue-300:#81BFFB;
+  --blue-100:#D5EDFE;
+  --blue-200:#81BFFB;
+  --blue-300:#7BB4FF;
   --blue-400:#2E82F2;
   --blue-800:#0E348C;
 
@@ -28,6 +30,32 @@ export const GlobalStyle = createGlobalStyle`
   --title: #25303F;
   --text: #666F7A;
   --text-off: #9AA3AA;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+html,body{
+  background: var(--bg);
+
+  -webkit-font-smoothing: antialiased;
+
+  width:100%;
+  height:100vh;
+}
+
+body, form, input, textarea, select, button {
+    font: 700 1rem "Open+Sans", sans-serif;
+}
+
+a, button, img{
+    cursor: pointer;
+}
+
+a{
+    color: inherit; // poe a cor do link a mesma do elemento pai
+    text-decoration:none; //tirar o underline dos links
 }
 
 `

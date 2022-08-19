@@ -1,0 +1,68 @@
+import styled from "styled-components";
+
+export const HeaderContainer = styled.div`
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--blue-800);
+  width: 100vw;
+  height: 8rem;
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  
+  `
+export const HeaderContent = styled.div`
+  width: 100vw;
+  max-width: 118rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 .2rem;
+    
+    /* background: var(--blue-100); */
+    /* border: 1px solid red; */
+  }
+  
+  ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    li{
+      font-size: 1.8rem; 
+      padding: 0 3.2rem;
+      color: var(--bg);
+      font-weight: 700;
+
+      &:hover{
+        /* alterar depois */
+        border-bottom: 2px solid var(--blue-400);
+      }
+    }
+  }
+ 
+`
+
+export const HeaderButtonLink = styled.a`
+  
+  font-size: 1.6rem;
+  color: var(--bg);
+  border-radius: .3rem;
+  background: var(--blue-400);
+  border: 0;
+  margin-left: 3.2rem;
+
+  padding: 8px 16px 8px 16px ;
+
+  transition:  .3s;
+
+  :hover{
+    background: var(--information);
+  }
+
+`
