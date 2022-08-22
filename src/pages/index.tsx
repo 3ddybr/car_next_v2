@@ -1,12 +1,25 @@
-import type { NextPage } from 'next'
-import { Banner } from '../components/Banner'
+import type { NextPage } from "next";
+import { Banner } from "../components/Banner";
+import { Cards } from "../components/Cards";
+import { HomeContainer, HomeContent } from "../styles/home";
 
 const Home: NextPage = () => {
   return (
-    <div >
+    <HomeContainer>
       <Banner />
-    </div>
-  )
-}
+      <HomeContent>
+        <Cards />
+        <Cards />
+        <Cards />
+        <Cards />
+        <Cards />
+        <Cards />
+        <Cards />
+        <Cards />
+        <Cards />
+      </HomeContent>
+    </HomeContainer>
+  );
+};
 
-export default Home
+export default Home;

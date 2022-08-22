@@ -1,4 +1,4 @@
-import { Controller, Control } from 'react-hook-form'
+import { Controller, Control } from "react-hook-form";
 interface TypeCar {
   value: string;
   label: string;
@@ -14,14 +14,18 @@ export function SelectTipos({ dataOptions, name, control }: PropsSelect) {
     <Controller
       render={({ field }) => {
         return (
-          <select  {...field} >
-            {dataOptions.map(item => <option key={item.value} value={item.value}>{item.label}</option>)}
+          <select {...field}>
+            {dataOptions.map((item) => (
+              <option key={item.value} value={item.value}>
+                {item.label}
+              </option>
+            ))}
           </select>
-        )
+        );
       }}
       control={control}
       name={name}
       defaultValue=""
     />
-  )
+  );
 }

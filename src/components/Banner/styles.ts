@@ -1,16 +1,15 @@
 import styled from "styled-components";
 
 export const BannerContainer = styled.div`
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height:48rem;
-  width:100vw;
-  background: linear-gradient(94.24deg, #283862 9.45%, #3B528F 75.75%);
+  height: 48rem;
+  width: 100vw;
+  background: linear-gradient(94.24deg, #283862 9.45%, #3b528f 75.75%);
   /* border: 1px solid red; */
-
-`
+`;
 
 export const BannerContent = styled.div`
   width: 100%;
@@ -22,8 +21,7 @@ export const BannerContent = styled.div`
   position: relative;
 
   /* border: 1px solid red; */
-
-`
+`;
 
 export const BannerText = styled.div`
   max-width: 35rem;
@@ -33,51 +31,49 @@ export const BannerText = styled.div`
   justify-content: center;
   flex-direction: column;
 
-
   position: absolute;
   left: 0;
   z-index: 1;
 
   /* border : 1px solid red; */
 
-  span{
+  span {
     font-size: 3.2rem;
     font-weight: normal;
     color: var(--blue-300);
   }
-  h1{
+  h1 {
     font-size: 6.4rem;
     font-weight: 700;
     color: var(--bg);
   }
 
-  p{
+  p {
     width: 100%;
 
     font-size: 1.8rem;
     font-weight: 400;
-    font-style:normal;
+    font-style: normal;
     color: var(--white);
-    
-    span{
+
+    span {
       font-size: 1.8rem;
       font-weight: 700;
       color: var(--white);
     }
 
-    padding-bottom: 18px ;
+    padding-bottom: 18px;
   }
 
-  a{
+  a {
     color: var(--bg);
     font-size: 1.6rem;
-    padding: 8px 16px ;
+    padding: 8px 16px;
   }
-`
-
+`;
 
 export const BannerImg = styled.div`
-  min-width:87rem ;
+  min-width: 87rem;
   display: flex;
   align-items: flex-end;
   height: 100%;
@@ -85,22 +81,20 @@ export const BannerImg = styled.div`
   position: absolute;
   right: 0;
   bottom: 0;
-
-`
+`;
 
 export const BannerButtonLink = styled.a`
-    font-size: 1.8rem;
-    border-radius: .3rem;
-    padding: 8px 16px ;
-    border: 0;
-    
-    background: var(--blue-400);
-    color: var(--bg);
+  font-size: 1.8rem;
+  border-radius: 0.3rem;
+  padding: 8px 16px;
+  border: 0;
 
-    transition:  .3s;
+  background: var(--blue-400);
+  color: var(--bg);
 
-    :hover{
-      background: var(--information);
-    }
+  transition: 0.3s;
 
-`
+  :hover {
+    background: var(--information);
+  }
+`;
