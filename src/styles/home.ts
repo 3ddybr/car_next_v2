@@ -14,5 +14,11 @@ export const HomeContent = styled.div`
   max-width: 118rem;
   width: 100%;
 
-  border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  margin-top: 13rem;
+
+  /* border: 1px solid red; */
 `;

@@ -10,11 +10,12 @@ export const FilterContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 0.3rem;
+  border-radius: 0.7rem;
 
   position: absolute;
   top: 53rem;
 
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
   /* border: 1px solid red; */
 `;
 

@@ -28,12 +28,13 @@ export function Banner() {
             <a href="">Saiba Mais</a>
           </div>
         </BannerText>
+
         <BannerImg>
           <Image src={CarroBannerImg} width={870} height={438} alt="" />
         </BannerImg>
       </BannerContent>
 
-      {/* <Filter /> */}
+      <Filter />
     </BannerContainer>
   );
 }

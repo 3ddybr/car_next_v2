@@ -9,6 +9,14 @@ const Home: NextPage = () => {
       <Banner />
       <HomeContent>
         <Cards />
+        <Cards />
+        <Cards />
+        <Cards />
+        <Cards />
+        <Cards />
+        <Cards />
+        <Cards />
+        <Cards />
       </HomeContent>
     </HomeContainer>
   );
