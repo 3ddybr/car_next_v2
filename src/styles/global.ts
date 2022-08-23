@@ -13,12 +13,13 @@ export const GlobalStyle = createGlobalStyle`
   --gray-100:#EDF4FA;
   --gray-200:#E6ECF2;
   --gray-300:#DEE5EB;
+  --gray-400:#D9D9D9;
   
   --blue-100:#D5EDFE;
   --blue-200:#81BFFB;
   --blue-300:#7BB4FF;
   --blue-400:#2E82F2;
-  --blue-800:#0E348C;
+  --blue-800:#263660;
 
   --bg: #F6FBFE;
 
@@ -42,7 +43,7 @@ html,body{
   -webkit-font-smoothing: antialiased;
 
   width:100%;
-  height:100vh;
+  /* height:100vh; */
 }
 
 body, form, input, textarea, select, button {

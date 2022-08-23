@@ -15,7 +15,8 @@ export const HomeContent = styled.div`
   width: 100%;
 
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
 
   margin-top: 13rem;
