@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 export const BannerContainer = styled.div`
+  width: 100%;
+  height: 48rem;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 48rem;
-  width: 100vw;
   background: linear-gradient(94.24deg, #283862 9.45%, #3b528f 75.75%);
   /* border: 1px solid red; */
 `;
