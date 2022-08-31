@@ -32,7 +32,7 @@ export const HeaderContent = styled.div`
     align-items: center;
     justify-content: center;
 
-    li {
+    a {
       font-size: 1.8rem;
       padding: 0 3.2rem;
       color: var(--bg);
@@ -40,6 +40,14 @@ export const HeaderContent = styled.div`
 
       &:hover {
         /* alterar depois */
+        /* content: "";
+        height: 3px;
+        border-radius: 3px 3px 0 0;
+        width: 100%; */
+        /* position: absolute; */
+        /* bottom: 1px;
+        left: 0;
+        background: var(--blue-400); */
         border-bottom: 2px solid var(--blue-400);
       }
     }

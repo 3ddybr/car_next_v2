@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { FooterButtonLink, FooterContainer, FooterContent } from "./styles";
 import LogoIng from "../../../public/assets/logo.svg";
-import { FacebookLogo, InstagramLogo } from "phosphor-react";
+import { FacebookLogo, InstagramLogo, WhatsappLogo } from "phosphor-react";
 
 export function Footer() {
   return (
@@ -28,8 +28,21 @@ export function Footer() {
           </div>
           <div>
             <p>Rede Social</p>
-            <InstagramLogo size={24} color="white" />
-            <FacebookLogo size={24} color="white" />
+            <InstagramLogo
+              size={24}
+              color="white"
+              href="https://github.com/3ddybr"
+            />
+            <FacebookLogo
+              size={24}
+              color="white"
+              href="https://github.com/3ddybr"
+            />
+            <WhatsappLogo
+              size={24}
+              color="white"
+              href="https://github.com/3ddybr"
+            />
           </div>
         </main>
         <footer>

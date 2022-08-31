@@ -30,7 +30,13 @@ export function Banner() {
         </BannerText>
 
         <BannerImg>
-          <Image src={CarroBannerImg} width={870} height={438} alt="" />
+          <Image
+            src={CarroBannerImg}
+            width={870}
+            height={438}
+            alt=""
+            priority
+          />
         </BannerImg>
       </BannerContent>
 
