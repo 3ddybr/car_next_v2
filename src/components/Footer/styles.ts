@@ -59,7 +59,7 @@ export const FooterContainer = styled.div`
 `;
 
 export const FooterContent = styled.div`
-  width: 100vw;
+  width: 100%;
   max-width: 118rem;
   height: 17.2rem;
 
