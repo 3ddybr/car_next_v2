@@ -30,8 +30,9 @@ export function Header() {
           </nav>
 
           <MagnifyingGlass size={17} weight="bold" color="var(--bg)" />
-
-          <HeaderButtonLink>Login</HeaderButtonLink>
+          <Link href="/login">
+            <HeaderButtonLink>Login</HeaderButtonLink>
+          </Link>
         </div>
       </HeaderContent>
     </HeaderContainer>
