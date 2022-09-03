@@ -2,7 +2,8 @@ import Image from "next/image";
 import { CardButtonLink, CardContainer, CardContent } from "./styles";
 
 import MustangImg from "../../../public/assets/fordmustang.svg";
-import { Gauge } from "phosphor-react";
+import { Gauge, Swap } from "phosphor-react";
+import Link from "next/link";
 
 export function Cards() {
   return (
@@ -22,14 +23,16 @@ export function Cards() {
               15.000 km
             </p>
             <p>
-              <Gauge size={20} />
+              <Swap size={20} />
               auto
             </p>
           </div>
 
           <h2>R$14.0000,00</h2>
         </main>
-        <CardButtonLink>Detalhes</CardButtonLink>
+        <Link href="/veiculos/pag_teste_detalhes">
+          <CardButtonLink>Detalhes</CardButtonLink>
+        </Link>
       </CardContent>
     </CardContainer>
   );
