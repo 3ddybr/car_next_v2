@@ -31,7 +31,7 @@ const Veiculos: NextPage = () =>
           <h1>Cadastro de veículos</h1>
           <div>
             <section>
-              <label>Marca</label>
+              <label>Tipo</label>
               <SelectTipos
                 dataOptions={dataTiposCarros}
                 control={control}
@@ -39,7 +39,7 @@ const Veiculos: NextPage = () =>
               />
             </section>
             <section>
-              <label>Tipo</label>
+              <label>Marcas</label>
               <SelectTipos
                 dataOptions={dataMarcas}
                 control={control}
