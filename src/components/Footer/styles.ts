@@ -93,6 +93,7 @@ export const FooterContent = styled.div`
     line-height: 2.2rem;
 
     p {
+      margin: 0;
       font-size: 1.2rem;
       color: var(--bg);
     }

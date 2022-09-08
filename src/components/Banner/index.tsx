@@ -15,12 +15,12 @@ export function Banner() {
     <BannerContainer>
       <BannerContent>
         <BannerText>
-          <span> CHEVROLET</span>
-          <h1> CAMARO</h1>
+          <span> FORD</span>
+          <h1> MUSTANG</h1>
 
           <p>
             Venha nos visitar e saia com o seu novo
-            <span> Camaro em alta velocidade!</span>
+            <span> Mustang em alta velocidade!</span>
           </p>
 
           <div>
