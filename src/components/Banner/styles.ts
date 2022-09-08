@@ -8,6 +8,8 @@ export const BannerContainer = styled.div`
   justify-content: center;
   flex-direction: column;
   background: linear-gradient(94.24deg, #283862 9.45%, #3b528f 75.75%);
+
+  padding: 0 0.5rem;
   /* border: 1px solid red; */
 `;
 

@@ -6,7 +6,6 @@ export const HomeContainer = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
   /* border: 1px solid red; */
 `;
 
@@ -20,6 +19,8 @@ export const HomeContent = styled.div`
   flex-wrap: wrap;
 
   margin-top: 13rem;
+
+  padding: 0 0.5rem;
 
   /* border: 1px solid red; */
 `;

@@ -24,7 +24,7 @@ export function Footer() {
           </div>
           <div>
             <p>Atendimento online</p>
-            <span>(61) 9592.5241</span>
+            <span>(28) XXXX.XXXX</span>
           </div>
           <div>
             <p>Rede Social</p>
