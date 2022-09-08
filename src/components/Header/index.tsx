@@ -5,6 +5,7 @@ import { HeaderButtonLink, HeaderContainer, HeaderContent } from "./styles";
 import { MagnifyingGlass } from "phosphor-react";
 
 import LogoIng from "../../../public/assets/logo.svg";
+import ActiveLink from "../ActiveLink";
 
 export function Header() {
   return (
@@ -14,18 +15,18 @@ export function Header() {
         <div>
           <nav>
             <ul>
-              <Link href="/">
-                <a>Inicio</a>
-              </Link>
-              <Link href="/veiculos">
-                <a>Veículos</a>
-              </Link>
-              <Link href="/empresa">
-                <a>Empresa</a>
-              </Link>
-              <Link href="/contato">
-                <a>Contato</a>
-              </Link>
+              <ActiveLink href="/">
+                <span>Inicio</span>
+              </ActiveLink>
+              <ActiveLink href="/veiculos">
+                <span>Veículos</span>
+              </ActiveLink>
+              <ActiveLink href="/empresa">
+                <span>Empresa</span>
+              </ActiveLink>
+              <ActiveLink href="/contato">
+                <span>Contato</span>
+              </ActiveLink>
             </ul>
           </nav>
 

@@ -28,29 +28,39 @@ export const HeaderContent = styled.div`
     /* background: var(--blue-100); */
     /* border: 1px solid red; */
   }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   ul {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0;
 
     a {
+      margin: 0;
       font-size: 1.8rem;
       padding: 0 3.2rem;
-      color: var(--bg);
+      color: #666f7a;
+      /* opacity: 0.6; */
       font-weight: 700;
+      position: relative;
 
-      &:hover {
-        /* alterar depois */
-        /* content: "";
-        height: 3px;
-        border-radius: 3px 3px 0 0;
-        width: 100%; */
-        /* position: absolute; */
-        /* bottom: 1px;
-        left: 0;
-        background: var(--blue-400); */
-        border-bottom: 2px solid var(--blue-400);
+      :hover {
+        color: var(--white);
+        :after {
+          content: "";
+          height: 3px;
+          border-radius: 3px 3px 0 0;
+          width: 100%;
+          position: absolute;
+          bottom: -3rem;
+          left: 0;
+          background: var(--blue-400);
+        }
       }
     }
   }
