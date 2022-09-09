@@ -64,6 +64,25 @@ export const HeaderContent = styled.div`
       }
     }
   }
+
+  .mobile {
+    display: none;
+  }
+
+  @media (max-width: 900px) {
+    .mobile {
+      display: initial;
+      cursor: pointer;
+    }
+    div {
+      .iconBusca {
+        display: none;
+      }
+      nav {
+        display: none;
+      }
+    }
+  }
 `;
 
 export const HeaderButtonLink = styled.a`
@@ -80,5 +99,9 @@ export const HeaderButtonLink = styled.a`
 
   :hover {
     background: var(--information);
+  }
+
+  @media (max-width: 900px) {
+    display: none;
   }
 `;
