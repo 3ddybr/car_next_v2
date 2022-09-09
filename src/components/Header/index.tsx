@@ -2,16 +2,18 @@ import Image from "next/image";
 import Link from "next/link";
 import { HeaderButtonLink, HeaderContainer, HeaderContent } from "./styles";
 
-import { MagnifyingGlass } from "phosphor-react";
+import { List, MagnifyingGlass } from "phosphor-react";
 
 import LogoIng from "../../../public/assets/logo.svg";
 import ActiveLink from "../ActiveLink";
 
-export function Header() {
+export function Header({ setMenuIsVisible }: any) {
   return (
     <HeaderContainer>
       <HeaderContent>
-        <Image src={LogoIng} width={120} alt="logo" priority />
+        <Link href="/">
+          <Image src={LogoIng} width={120} alt="logo" priority />
+        </Link>
         <div>
           <nav>
             <ul>
@@ -30,10 +32,23 @@ export function Header() {
             </ul>
           </nav>
 
-          <MagnifyingGlass size={17} weight="bold" color="var(--bg)" />
+          <MagnifyingGlass
+            className="iconBusca"
+            size={17}
+            weight="bold"
+            color="var(--bg)"
+          />
           <Link href="/login">
             <HeaderButtonLink>Login</HeaderButtonLink>
           </Link>
+        </div>
+
+        <div className="mobile">
+          <List
+            size={32}
+            color="#050505"
+            onClick={() => setMenuIsVisible(true)}
+          />
         </div>
       </HeaderContent>
     </HeaderContainer>
