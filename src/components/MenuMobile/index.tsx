@@ -5,8 +5,10 @@ import ActiveLink from "../ActiveLink";
 import { MenuContainer, MobileButtonLink } from "./styeles";
 
 export function MenuMobile({ menuIsVisible, setMenuIsVisible }: any) {
-  useEffect(() => {}, [menuIsVisible]);
-  document.body.style.overflow = menuIsVisible ? "hidden" : "auto";
+  useEffect(() => {
+    document.body.style.overflow = menuIsVisible ? "hidden" : "auto";
+  }, [menuIsVisible]);
+
   return (
     <MenuContainer isVisible={menuIsVisible}>
       <X size={45} onClick={() => setMenuIsVisible(false)} />
