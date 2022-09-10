@@ -15,22 +15,24 @@ export function MenuMobile({ menuIsVisible, setMenuIsVisible }: any) {
       <div>
         <nav>
           <ActiveLink href="/">
-            <span>Inicio</span>
+            <span onClick={() => setMenuIsVisible(false)}>Inicio</span>
           </ActiveLink>
           <ActiveLink href="/veiculos">
-            <span>Veículos</span>
+            <span onClick={() => setMenuIsVisible(false)}>Veículos</span>
           </ActiveLink>
           <ActiveLink href="/empresa">
-            <span>Empresa</span>
+            <span onClick={() => setMenuIsVisible(false)}>Empresa</span>
           </ActiveLink>
           <ActiveLink href="/contato">
-            <span>Contato</span>
+            <span onClick={() => setMenuIsVisible(false)}>Contato</span>
           </ActiveLink>
         </nav>
 
         {/* <MagnifyingGlass size={17} weight="bold" color="var(--bg)" /> */}
         <Link href="/login">
-          <MobileButtonLink>Login</MobileButtonLink>
+          <MobileButtonLink onClick={() => setMenuIsVisible(false)}>
+            Login
+          </MobileButtonLink>
         </Link>
       </div>
     </MenuContainer>
