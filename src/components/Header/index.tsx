@@ -46,7 +46,7 @@ export function Header({ setMenuIsVisible }: any) {
         <div className="mobile">
           <List
             size={32}
-            color="#050505"
+            color="var(--bg)"
             onClick={() => setMenuIsVisible(true)}
           />
         </div>

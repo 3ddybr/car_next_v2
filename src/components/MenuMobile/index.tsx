@@ -2,7 +2,7 @@ import Link from "next/link";
 import { MagnifyingGlass, X } from "phosphor-react";
 import { useEffect } from "react";
 import ActiveLink from "../ActiveLink";
-import { MenuContainer, MobileButtonLink } from "./styeles";
+import { MenuContainer, MobileButtonLink } from "./styles";
 
 export function MenuMobile({ menuIsVisible, setMenuIsVisible }: any) {
   useEffect(() => {
@@ -11,9 +11,9 @@ export function MenuMobile({ menuIsVisible, setMenuIsVisible }: any) {
 
   return (
     <MenuContainer isVisible={menuIsVisible}>
-      <X size={45} onClick={() => setMenuIsVisible(false)} />
+      <X size={45} onClick={() => setMenuIsVisible(false)} color="white" />
       <div>
-        <nav>
+        <nav onClick={() => setMenuIsVisible(false)}>
           <ActiveLink href="/">
             <span>Inicio</span>
           </ActiveLink>
@@ -30,7 +30,9 @@ export function MenuMobile({ menuIsVisible, setMenuIsVisible }: any) {
 
         {/* <MagnifyingGlass size={17} weight="bold" color="var(--bg)" /> */}
         <Link href="/login">
-          <MobileButtonLink>Login</MobileButtonLink>
+          <MobileButtonLink onClick={() => setMenuIsVisible(false)}>
+            Login
+          </MobileButtonLink>
         </Link>
       </div>
     </MenuContainer>

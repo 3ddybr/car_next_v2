@@ -11,12 +11,12 @@ export const LoginContainer = styled.form`
 
 export const LoginContent = styled.div`
   width: 100vw;
-  max-width: 46.7rem;
-  height: 26rem;
+  max-width: 49.2rem;
+  height: 29rem;
   margin: 6.4rem auto;
+  padding: 2.5rem 2.5rem 4rem 2.5rem;
 
   border-bottom: 1px solid var(--gray-300);
-
   position: relative;
 
   h1 {
@@ -75,8 +75,8 @@ export const LoginButtonLink = styled.a`
   padding: 8px 16px 8px 16px;
 
   position: absolute;
-  bottom: 1.8rem;
-  right: 0;
+  /* bottom: -1rem; */
+  right: 2.5rem;
 
   transition: 0.3s;
 

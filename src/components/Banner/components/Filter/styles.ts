@@ -16,7 +16,13 @@ export const FilterContainer = styled.div`
   top: 53rem;
 
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
-  /* border: 1px solid red; */
+
+  @media (max-width: 768px) {
+    height: auto;
+
+    top: 46rem;
+    max-width: 38rem;
+  }
 `;
 
 export const FilterContent = styled.form`
@@ -53,37 +59,17 @@ export const FilterContent = styled.form`
       color: var(--text-off);
 
       border: 0;
-
-      /* teste */
-      /* appearance: none;
-      position: relative; */
     }
+  }
 
-    /* select::after {
-      content: "";
-      position: absolute;
-      right: 8px;
-      top: 50%;
-      margin-top: 4px;
-      border-top: 8px solid green;
-      border-left: 6px solid transparent;
-      border-right: 6px solid transparent;
-      pointer-events: none;
-    } */
+  @media (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-    /* select::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      right: 8px;zzzzzzzzzzzzzzzzzzz
-      padding: 0 1em;
-      background: #2b2e2e;
-      cursor: pointer;
-      pointer-events: none;
-      transition: 0.25s all ease;
-
-      border: 8px solid red;
-    } */
+    /* margin: 2rem 1rem; */
+    padding: 2rem 1rem;
+    gap: 1rem;
   }
 `;
 
