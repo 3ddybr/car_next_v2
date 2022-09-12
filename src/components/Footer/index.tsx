@@ -8,9 +8,7 @@ export function Footer() {
     <FooterContainer>
       <header>
         <div>
-          <p>
-            Ofertas especiais <span> no seu e-mail:</span>
-          </p>
+          <p>Ofertas especiais no seu e-mail :</p>
           <input type="email" placeholder="E-mail" />
           <FooterButtonLink>Cadastrar</FooterButtonLink>
         </div>
@@ -26,23 +24,25 @@ export function Footer() {
             <p>Atendimento online</p>
             <span>(28) XXXX.XXXX</span>
           </div>
-          <div>
+          <div className="social">
             <p>Rede Social</p>
-            <InstagramLogo
-              size={24}
-              color="white"
-              href="https://github.com/3ddybr"
-            />
-            <FacebookLogo
-              size={24}
-              color="white"
-              href="https://github.com/3ddybr"
-            />
-            <WhatsappLogo
-              size={24}
-              color="white"
-              href="https://github.com/3ddybr"
-            />
+            <div>
+              <InstagramLogo
+                size={24}
+                color="white"
+                href="https://github.com/3ddybr"
+              />
+              <FacebookLogo
+                size={24}
+                color="white"
+                href="https://github.com/3ddybr"
+              />
+              <WhatsappLogo
+                size={24}
+                color="white"
+                href="https://github.com/3ddybr"
+              />
+            </div>
           </div>
         </main>
         <footer>

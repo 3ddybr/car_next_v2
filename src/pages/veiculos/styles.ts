@@ -10,9 +10,9 @@ export const VeiculosContainer = styled.div`
 
 export const VeiculosContent = styled.form`
   width: 100vw;
-  max-width: 57rem;
+  max-width: 59.5rem;
   margin: 6.4rem auto;
-
+  padding: 2.5rem;
   position: relative;
 
   h1 {
@@ -114,6 +114,25 @@ export const VeiculosContent = styled.form`
 
     padding-bottom: 0.8rem;
   }
+
+  @media (max-width: 600px) {
+    div {
+      section {
+        width: 100%;
+        input,
+        select {
+          max-width: 100%;
+        }
+        textarea {
+          width: 90vw;
+          /* border: 1px solid red; */
+        }
+      }
+    }
+    button {
+      right: 3rem;
+    }
+  }
 `;
 
 export const VeiculosOpcionais = styled.main`
@@ -146,5 +165,8 @@ export const VeiculosOpcionais = styled.main`
 
       /* border: 1px solid red; */
     }
+  }
+  @media (max-width: 420px) {
+    grid-template-columns: repeat(2, 1fr);
   }
 `;

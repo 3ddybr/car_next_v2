@@ -13,8 +13,13 @@ export const FooterContainer = styled.div`
   /* border: 1px solid red; */
 
   p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 1.8rem;
     color: var(--bg);
+    margin: 0;
+    /* padding: 0.5rem; */
   }
 
   span {
@@ -31,6 +36,7 @@ export const FooterContainer = styled.div`
     justify-content: center;
     background: var(--blue-400);
 
+    padding: 1rem 1rem;
     /* border: 1px solid green; */
 
     div {
@@ -43,7 +49,8 @@ export const FooterContainer = styled.div`
       /* border: 1px solid green; */
 
       input {
-        width: 39.5rem;
+        width: 100%;
+        max-width: 39.5rem;
         height: 4.2rem;
         font-size: 1.6rem;
         padding: 1.2rem;
@@ -52,7 +59,20 @@ export const FooterContainer = styled.div`
         border: 0;
         opacity: 50%;
 
-        margin-left: 1.6rem;
+        /* margin-left: 1.6rem; */
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    height: auto;
+    header {
+      height: auto;
+
+      div {
+        gap: 1rem;
+        flex-direction: column;
+        padding: 2rem;
       }
     }
   }
@@ -104,7 +124,36 @@ export const FooterContent = styled.div`
       font-weight: 400;
     }
   }
-  /* border: 1px solid red; */
+  @media (max-width: 768px) {
+    height: auto;
+
+    main {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      gap: 2rem;
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        div {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: row;
+        }
+      }
+    }
+  }
 `;
 
 export const FooterButtonLink = styled.a`
