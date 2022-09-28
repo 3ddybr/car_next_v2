@@ -14,22 +14,49 @@ export const ProductContent = styled.div`
   max-width: 117rem;
   margin: 6.4rem auto;
 
+  padding: 0 0.5rem;
+
   /* border: 1px solid red; */
 `;
 
 export const ProductDetails = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+
+  @media (max-width: 800px) {
+    /* grid-template-columns: 1fr; */
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 100%;
+  }
 `;
 
 export const ProductDetailsSummary = styled.div`
   width: 100%;
   min-width: 67rem;
+
+  @media (max-width: 1062px) {
+    min-width: 100%;
+  }
+
+  @media (max-width: 932px) {
+    min-width: 50rem;
+    /* border: 1px solid red; */
+  }
+
+  @media (max-width: 800px) {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    min-width: 100%;
+    /* border: 1px solid red; */
+  }
 `;
 
 export const ProductDetailsCarrousel = styled.div`
-  /* border: 1px solid red; */
-
   width: 100%;
   max-width: 67rem;
 
@@ -48,6 +75,17 @@ export const ProductDetailsCarrousel = styled.div`
     min-width: 17rem;
     min-height: 11.2rem;
     border-radius: 0.5rem;
+  }
+
+  @media (max-width: 800px) {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    max-width: 100%;
+
+    div {
+      min-width: 15rem;
+    }
   }
 `;
 
@@ -138,6 +176,8 @@ export const ProductsDetailsDescription = styled.section`
 `;
 
 export const ProductDetailsInfo = styled.div`
+  /* border: 1px solid red; */
+
   margin-left: 3rem;
   max-width: 47rem;
   background: #ffffff;
@@ -260,6 +300,16 @@ export const ProductDetailsInfo = styled.div`
       border-top: 1px solid var(--gray-200);
       padding-top: 2.5rem;
     }
+  }
+
+  @media (max-width: 800px) {
+    /* border: 1px solid red; */
+    margin: 0;
+
+    display: flex;
+    /* align-content: center; */
+    justify-content: center;
+    max-width: 100%;
   }
 `;
 
