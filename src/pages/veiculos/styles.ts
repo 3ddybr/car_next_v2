@@ -8,7 +8,7 @@ export const VeiculosContainer = styled.div`
   width: 100%;
 `;
 
-export const VeiculosContent = styled.form`
+export const VeiculosContentForm = styled.form`
   width: 100vw;
   max-width: 59.5rem;
   margin: 6.4rem auto;

@@ -14,7 +14,7 @@ const ActiveLink = ({ children, href }: ActiveLinkProps) => {
   };
 
   const styles = {
-    color: asPath === href ? "white" : "",
+    color: asPath === href ? "white" : "#a3acbe",
   };
 
   return (

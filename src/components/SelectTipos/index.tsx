@@ -6,7 +6,7 @@ interface TypeCar {
 interface PropsSelect {
   dataOptions: TypeCar[];
   name: string;
-  control?: Control;
+  control?: Control<any>;
 }
 
 export function SelectTipos({ dataOptions, name, control }: PropsSelect) {

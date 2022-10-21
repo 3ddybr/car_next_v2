@@ -1,10 +1,10 @@
 export type ProductsData = {
   // destaque: boolean;
   title: string;
-  img: string;
-  type?: string;
+  // img: string;
+  type: string;
   brand: string; //marca
-  model?: string;
+  model: string;
   version_car: string;
   year_model: string; //ano/model
   mileage: string; //quilometragem
