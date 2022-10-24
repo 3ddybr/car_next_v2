@@ -1,5 +1,5 @@
 import { NextPage } from "next";
-import React from "react";
+import React, { useState } from "react";
 
 import { SelectTipos } from "../../components/SelectTipos";
 import { dataMarcas } from "../../utils/dataMarcas";
@@ -11,16 +11,19 @@ import * as yup from "yup";
 
 import { ProductsData } from "../../models/products.models";
 
+import { firestoreDB } from "../../services/firebase";
+import { addDoc, collection } from "firebase/firestore";
+
 import {
   VeiculosContainer,
   VeiculosContentForm,
   VeiculosOpcionais,
 } from "./styles";
 
-const schema = yup.object().shape({
+const schemaFormProduto = yup.object().shape({
   // destaque: yup.boolean(),
 
-  title: yup.string().required("Titulo e obrigatório"),
+  title: yup.string().required("Titulo e obrigatório").min(3),
   // img: yup.string().required(),
 
   type: yup.string().required("Tipo de veículos obrigatório"),
@@ -28,8 +31,11 @@ const schema = yup.object().shape({
 
   model: yup.string().required("Modelo e obrigatório"),
   version_car: yup.string().required("Versão e obrigatório"),
-  year_model: yup.string().required("Ano Modelo/ Fabricação e obrigatório"), //ano/model
-  mileage: yup.string().required("Quilometragem e obrigatório"), //quilometragem
+  year_model: yup
+    .number()
+    .positive()
+    .required("Ano Modelo/ Fabricação e obrigatório"), //ano/model
+  mileage: yup.number().positive().required("Quilometragem e obrigatório"), //quilometragem
   //power: yup.string().required("Potencia e obrigatório"), //potencia
   color_car: yup.string().required("Cor e obrigatório"),
   price: yup.string().required("Preço e obrigatório"),
@@ -45,24 +51,31 @@ const schema = yup.object().shape({
 });
 
 const Veiculos: NextPage = () => {
+  const [refIdDocDB, setRefIdDocDB] = useState("");
   const {
     register,
     handleSubmit,
     control,
     formState: { errors },
   } = useForm<ProductsData>({
-    resolver: yupResolver(schema),
+    resolver: yupResolver(schemaFormProduto),
   });
 
   console.log(errors);
-  const handleSubmitForm: SubmitHandler<ProductsData> = (data) => {
+  const handleSubmitForm: SubmitHandler<ProductsData> = async (data) => {
+    // console.log("Console em data: ", data);
+    const vehiclesCol = collection(firestoreDB, "vehicles");
+
     try {
-      console.log(data);
+      const docRef = await addDoc(vehiclesCol, { data });
+      setRefIdDocDB(docRef.id);
+      // console.log("Documento escrito com id: ", docRef.id);
     } catch (error) {
-      console.log(error);
+      console.error("Error adding document: ", error);
     }
   };
 
+  console.log("referencia do ir na tabela: ", refIdDocDB);
   return (
     <VeiculosContainer>
       <VeiculosContentForm onSubmit={handleSubmit(handleSubmitForm)}>
@@ -121,6 +134,7 @@ const Veiculos: NextPage = () => {
           <section>
             <label>Quilometragem</label>
             <input
+              type="number"
               placeholder="Informe a km"
               {...register("mileage")}
               id="mileage"
@@ -130,6 +144,7 @@ const Veiculos: NextPage = () => {
           <section>
             <label>Ano - Modelo / Fabricação</label>
             <input
+              type="number"
               placeholder="Informe a Ano/Fabricação"
               {...register("year_model")}
               id="year_model"
@@ -206,7 +221,7 @@ const Veiculos: NextPage = () => {
         <div>
           <section>
             <label>Preço</label>
-            <input type="text" id="price" {...register("price")} />
+            <input type="number" id="price" {...register("price")} />
             <p>{errors.price?.message}</p>
           </section>
 
@@ -217,7 +232,7 @@ const Veiculos: NextPage = () => {
               id="description"
               {...register("description")}
             />
-            <p>{errors.price?.message}</p>
+            <p>{errors.description?.message}</p>
           </section>
         </div>
         <button type="submit">Cadastrar</button>

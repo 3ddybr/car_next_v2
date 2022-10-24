@@ -3,6 +3,8 @@ import { Banner } from "../components/Banner";
 import { Cards } from "../components/Cards";
 import { HomeContainer, HomeContent } from "../styles/home";
 
+import "../utils/traducoesYup";
+
 const Home: NextPage = () => {
   return (
     <HomeContainer>
