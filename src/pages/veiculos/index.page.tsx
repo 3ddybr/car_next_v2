@@ -11,6 +11,8 @@ import * as yup from "yup";
 
 import { ProductsData } from "../../models/products.models";
 
+// import { ModalInsertImg } from "./components/ModalInsertImg";
+
 import { firestoreDB } from "../../services/firebase";
 import { addDoc, collection } from "firebase/firestore";
 
@@ -19,6 +21,8 @@ import {
   VeiculosContentForm,
   VeiculosOpcionais,
 } from "./styles";
+
+import { Modal as ModalImg, Button as ButtonModal } from "antd";
 
 const schemaFormProduto = yup.object().shape({
   // destaque: yup.boolean(),
@@ -34,6 +38,8 @@ const schemaFormProduto = yup.object().shape({
   year_model: yup
     .number()
     .positive()
+    .min(4)
+    .max(4)
     .required("Ano Modelo/ Fabricação e obrigatório"), //ano/model
   mileage: yup.number().positive().required("Quilometragem e obrigatório"), //quilometragem
   //power: yup.string().required("Potencia e obrigatório"), //potencia
@@ -52,6 +58,32 @@ const schemaFormProduto = yup.object().shape({
 
 const Veiculos: NextPage = () => {
   const [refIdDocDB, setRefIdDocDB] = useState("");
+
+  // Modal Imagens
+  const [open, setOpen] = useState(false);
+  const [confirmLoading, setConfirmLoading] = useState(false);
+  const [modalText, setModalText] = useState("Insira");
+
+  const showModal = () => {
+    setOpen(true);
+  };
+
+  const handleOk = () => {
+    setModalText("The modal will be closed after two seconds");
+    setConfirmLoading(true);
+    setTimeout(() => {
+      setOpen(false);
+      setConfirmLoading(false);
+    }, 2000);
+  };
+
+  const handleCancel = () => {
+    console.log("Clicked cancel button");
+    setOpen(false);
+  };
+
+  // Modal Imagens fim
+
   const {
     register,
     handleSubmit,
@@ -61,7 +93,7 @@ const Veiculos: NextPage = () => {
     resolver: yupResolver(schemaFormProduto),
   });
 
-  console.log(errors);
+  // console.log(errors);
   const handleSubmitForm: SubmitHandler<ProductsData> = async (data) => {
     // console.log("Console em data: ", data);
     const vehiclesCol = collection(firestoreDB, "vehicles");
@@ -69,6 +101,8 @@ const Veiculos: NextPage = () => {
     try {
       const docRef = await addDoc(vehiclesCol, { data });
       setRefIdDocDB(docRef.id);
+      //funcao de abrir o modal
+      showModal();
       // console.log("Documento escrito com id: ", docRef.id);
     } catch (error) {
       console.error("Error adding document: ", error);
@@ -237,6 +271,24 @@ const Veiculos: NextPage = () => {
         </div>
         <button type="submit">Cadastrar</button>
       </VeiculosContentForm>
+
+      <button onClick={() => showModal()}>Chamar</button>
+
+      <ModalImg
+        title={`Insira as imagens, ${refIdDocDB}`}
+        visible={open}
+        // open={open}
+        onOk={handleOk}
+        confirmLoading={confirmLoading}
+        onCancel={handleCancel}
+      >
+        <form method="POST" onSubmit={() => {}}>
+          <input type="file" name="image" />
+          {/* <input type="text" name="name" placeholder="nome do arquivo"/> */}
+          <button>Enviar</button>
+        </form>
+        <p>{modalText}</p>
+      </ModalImg>
     </VeiculosContainer>
   );
 };
